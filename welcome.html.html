@@ -3,73 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>eiei</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-            font-family: Arial, sans-serif;
-            padding: 20px; /* เพิ่ม padding เพื่อป้องกันเนื้อหาชิดขอบ */
-        }
-        .container {
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            max-width: 600px; /* จำกัดความกว้าง */
-            width: 100%; /* ให้ปรับขนาดตามอุปกรณ์ */
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            margin: 0;
+            padding: 0;
+            color: #fff;
         }
         h1 {
-            color: #333;
-            font-size: 2em;
-            margin-bottom: 20px;
+            margin-top: 50px;
+            font-size: 2.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
-        button {
-            background-color: #ff69b4;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 100%; /* ปรับปุ่มให้เต็มความกว้าง */
-            max-width: 300px; /* จำกัดความกว้างสูงสุดของปุ่ม */
+        p {
+            font-size: 1.3em;
+            margin: 15px 0 30px 0;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
         }
-        button:hover {
-            background-color: #ff85c4;
+        img {
+            max-width: 300px;
+            height: auto;
+            border: 5px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
         }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em; /* ปรับขนาดหัวข้อให้เล็กลงในอุปกรณ์เล็ก */
-            }
-            button {
-                padding: 12px 20px; /* ปรับปุ่มให้เหมาะสมกับหน้าจอเล็ก */
-                font-size: 1em;
-            }
-        }
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em; /* ปรับขนาดหัวข้อให้เล็กลงอีกสำหรับหน้าจอเล็กมาก */
-            }
-            button {
-                font-size: 0.9em; /* ลดขนาดปุ่ม */
-                padding: 10px 15px;
-            }
-        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>ยินดีต้อนรับ!</h1>
-        <button onclick="goToNextPage()">ทำการสำรวจเว็บ</button>
-    </div>
+    <h1>อิอิ 🎁</h1>
+    
+    <img src="eiei.jpg" alt="แอบยิ้มรู้">
+    <h1>แอบยิ้มชัวร์ 100% เอาไป1ยิ้ม 🎉💖</h1>
 
-    <script>
-        function goToNextPage() {
-            window.location.href = "index.html"; // ลิงก์ไปยังหน้า index.html
-        }
-    </script>
 </body>
 </html>
