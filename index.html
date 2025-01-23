@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Special Message</title>
     <style>
         body {
             display: flex;
@@ -11,64 +11,132 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-            font-family: Arial, sans-serif;
-            padding: 20px; /* เพิ่ม padding เพื่อป้องกันเนื้อหาชิดขอบ */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            font-family: 'Kanit', sans-serif;
+            padding: 20px;
         }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .container {
             text-align: center;
-            max-width: 600px; /* จำกัดความกว้าง */
-            width: 100%; /* ให้ปรับขนาดตามอุปกรณ์ */
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            animation: float 6s ease-in-out infinite;
         }
+
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-20px); }
+            100% { transform: translatey(0px); }
+        }
+
         h1 {
-            color: #333;
-            font-size: 2em;
-            margin-bottom: 20px;
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in;
         }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
         button {
-            background-color: #ff69b4;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
             color: white;
             border: none;
             padding: 15px 30px;
             font-size: 1.2em;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 100%; /* ปรับปุ่มให้เต็มความกว้าง */
-            max-width: 300px; /* จำกัดความกว้างสูงสุดของปุ่ม */
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 300px;
+            position: relative;
+            overflow: hidden;
         }
+
         button:hover {
-            background-color: #ff85c4;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ff8e8e, #ff6b6b);
         }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        button:hover::before {
+            left: 100%;
+        }
+
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.8em; /* ปรับขนาดหัวข้อให้เล็กลงในอุปกรณ์เล็ก */
+                font-size: 2em;
             }
             button {
-                padding: 12px 20px; /* ปรับปุ่มให้เหมาะสมกับหน้าจอเล็ก */
-                font-size: 1em;
+                padding: 12px 20px;
+                font-size: 1.1em;
             }
         }
+
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.5em; /* ปรับขนาดหัวข้อให้เล็กลงอีกสำหรับหน้าจอเล็กมาก */
+                font-size: 1.7em;
             }
             button {
-                font-size: 0.9em; /* ลดขนาดปุ่ม */
+                font-size: 1em;
                 padding: 10px 15px;
+            }
+            .container {
+                padding: 20px;
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>ยินดีต้อนรับ!</h1>
-        <button onclick="goToNextPage()">ทำการสำรวจเว็บ</button>
+        <h1>สวัสดีคนพิเศษ ❤️</h1>
+        <button onclick="goToNextPage()">คลิกเพื่อดูข้อความพิเศษ</button>
     </div>
 
     <script>
         function goToNextPage() {
-            window.location.href = "3.html"; // ลิงก์ไปยังหน้า index.html
+            // เพิ่มเอฟเฟกต์การเฟดเอาท์ก่อนเปลี่ยนหน้า
+            document.querySelector('.container').style.opacity = '0';
+            document.querySelector('.container').style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                window.location.href = "3.html";
+            }, 500);
         }
     </script>
 </body>
