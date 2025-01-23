@@ -95,6 +95,26 @@
                 max-width: 200px;
             }
         }
+            .footer-message {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 0.8em;  /* ลดขนาดลงจาก 1.2em */
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        opacity: 0.6;      /* ทำให้จางลงเล็กน้อย */
+        transition: all 0.3s ease;
+    }
+
+    .small-heart {
+        font-size: 0.6em;  /* ลดขนาดหัวใจลง */
+        display: inline-block;
+        animation: floating 2s ease-in-out infinite;
+    }
+
+    .footer-message:hover {
+        opacity: 1;
+        transform: scale(1.05);  /* ลดการขยายตัวลงเมื่อ hover */
+    }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
@@ -106,8 +126,8 @@
         <img src="eiei1.jpg" alt="แอบยิ้มรู้" loading="lazy">
     </div>
     <h1>แอบยิ้มชัวร์ 100% เอาไป1ยิ้ม <span class="heart">🎉</span><span class="heart">💖</span></h1>
-     <div class="footer-message">
-        <span class="small-heart">💝</span>ขอดูนมหน่อย <span class="small-heart">💝</span>
-    </div>
+   <div class="footer-message">
+    <span class="small-heart"></span> ดูนมหน่อย <span class="small-heart">💝</span>
+</div>
 </body>
 </html>
